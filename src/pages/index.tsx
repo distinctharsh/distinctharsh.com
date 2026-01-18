@@ -41,7 +41,7 @@ export default function Home() {
           {
             property: "keywords",
             content:
-              "Harsh Singh, distinctharsh, distinct harsh, Senior Software Developer, PHP Developer, Laravel Developer, MERN Stack Developer, Python Developer, Django Developer, Full Stack Developer, Web Developer, Delhi, India, Software Engineer",
+              "Harsh Singh, distinctharsh, Senior Software Developer, National Informatics Centre Developer, NIC Developer, Cabinet Secretariat IT, Rashtrapati Bhavan Developer, GovTech India, PHP Developer, Laravel Developer, MERN Stack Developer, Python Developer, Django Developer, Full Stack Developer, Web Developer, Delhi, India",
           },
         ]}
       />
@@ -54,45 +54,49 @@ export default function Home() {
         )}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "Person",
-                name: "Harsh Singh",
-                alternateName: "distinctharsh",
-                url: siteMetadata.siteUrl,
-                image: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-                sameAs: [
-                  siteMetadata.github,
-                  siteMetadata.twitter,
-                  siteMetadata.linkedin,
-                  "https://blogs.distinctharsh.com",
-                ],
-                jobTitle: "Senior Software Developer",
-                worksFor: {
-                  "@type": "Organization",
-                  name: "NIC",
+          siteMetadata.github,
+        siteMetadata.twitter,
+        siteMetadata.linkedin,
+        "https://blogs.distinctharsh.com",
+        ],
+        jobTitle: "Senior Software Developer",
+        worksFor: [
+        {
+          "@type": "Organization",
+        name: "National Informatics Centre (NIC)",
+        url: "https://www.nic.in/",
+                  },
+        {
+          "@type": "Organization",
+        name: "Cabinet Secretariat (Rashtrapati Bhavan)",
+                  },
+        ],
+        description:
+        "Senior Software Developer specializing in PHP, Laravel, MERN, and Python. Currently working at National Informatics Centre (NIC).",
+        address: {
+          "@type": "PostalAddress",
+        addressLocality: "New Delhi",
+        addressCountry: "India",
                 },
-                description:
-                  "Senior Software Developer specializing in PHP, Laravel, MERN, and Python.",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "New Delhi",
-                  addressCountry: "India",
-                },
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                url: siteMetadata.siteUrl,
-                name: "Harsh Singh Portfolio",
-                author: {
-                  "@type": "Person",
-                  name: "Harsh Singh",
+        contactPoint: {
+          "@type": "ContactPoint",
+        contactType: "customer support",
+        email: siteMetadata.email,
+        url: `${siteMetadata.siteUrl}/#contact`,
                 },
               },
-            ]),
+        {
+          "@context": "https://schema.org",
+        "@type": "WebSite",
+        url: siteMetadata.siteUrl,
+        name: "Harsh Singh Portfolio",
+        description: "Portfolio of Harsh Singh, Senior Software Developer at NIC.",
+        author: {
+          "@type": "Person",
+        name: "Harsh Singh",
+                },
+              },
+        ]),
           }}
         />
       </Head>

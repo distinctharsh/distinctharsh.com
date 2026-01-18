@@ -10,7 +10,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     date: "Present",
     location: "New Delhi",
     description:
-      "Developing Laravel-based enterprise applications with role & permission management, approval workflows, and status-driven systems. Refactoring legacy Core PHP projects into Laravel and managing LAN-based version control workflows (Git & SVN).",
+      "Senior Software Developer at National Informatics Centre (NIC). Developing Laravel-based enterprise applications with role & permission management, approval workflows, and status-driven systems. Refactoring legacy Core PHP projects into Laravel and managing LAN-based version control workflows (Git & SVN).",
   },
   {
     title: "Software Developer",
@@ -21,6 +21,6 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     date: "Past",
     location: "New Delhi",
     description:
-      "Involved in developing and maintaining mission-critical systems. Focused on clean architecture, role-based access control, approval workflows, and secure data handling.",
+      "Software Developer at Rashtrapati Bhavan (Cabinet Secretariat). Involved in developing and maintaining mission-critical systems. Focused on clean architecture, role-based access control, approval workflows, and secure data handling.",
   },
 ];
