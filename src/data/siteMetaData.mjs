@@ -1,21 +1,21 @@
 export const siteMetadata = {
-  title: "Amit Chauhan portfolio",
-  author: "Amit Chauhan",
-  headerTitle: "Amit Chauhan",
-  description: "Frontend and Reactjs developer",
+  title: "Harsh Singh Portfolio",
+  author: "Harsh Singh",
+  headerTitle: "Harsh Singh",
+  description: "Senior Software Developer | PHP & Laravel Expert",
   language: "en-us",
   theme: "light",
-  siteName: "amitchauhan.me",
-  siteUrl: "https://amitchauhan.me",
+  siteName: "harshsingh.dev",
+  siteUrl: "https://harshsingh.dev",
   siteRepo: "https://github.com/BUMBAIYA/amitchauhan-v2",
   siteLogo: "/favicon.ico",
   image: "/static/homepage.png",
   twitterImage: "/static/homepage.png",
   socialBanner: "/static/homepage.png",
-  email: "amitchauhan263871@gmail.com",
-  github: "https://github.com/BUMBAIYA",
-  twitter: "https://twitter.com/amitcha2638",
-  linkedin: "https://www.linkedin.com/in/amitchauhan-dev",
+  email: "", // User did not provide email
+  github: "https://github.com", // Placeholder
+  twitter: "https://twitter.com", // Placeholder
+  linkedin: "https://www.linkedin.com", // Placeholder
   locale: "en-US",
-  googleSiteVerification: "_YJlO90eSoye2AQOhbkRAzNbejzCGiTgAD4RNR3NtHc",
+  googleSiteVerification: "",
 };
