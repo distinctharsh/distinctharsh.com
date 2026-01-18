@@ -54,49 +54,86 @@ export default function Home() {
         )}
         <script
           type="application/ld+json"
-          siteMetadata.github,
-        siteMetadata.twitter,
-        siteMetadata.linkedin,
-        "https://blogs.distinctharsh.com",
-        ],
-        jobTitle: "Senior Software Developer",
-        worksFor: [
-        {
-          "@type": "Organization",
-        name: "National Informatics Centre (NIC)",
-        url: "https://www.nic.in/",
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Harsh Singh",
+                alternateName: [
+                  "distinctharsh",
+                  "Harsh Singh NIC",
+                  "Harsh Singh Developer",
+                ],
+                url: siteMetadata.siteUrl,
+                image: `${siteMetadata.siteUrl}${siteMetadata.image}`,
+                sameAs: [
+                  siteMetadata.github,
+                  siteMetadata.twitter,
+                  siteMetadata.linkedin,
+                  "https://blogs.distinctharsh.com",
+                ],
+                jobTitle: "Senior Software Developer",
+                worksFor: [
+                  {
+                    "@type": "Organization",
+                    name: "National Informatics Centre (NIC)",
+                    url: "https://www.nic.in/",
                   },
-        {
-          "@type": "Organization",
-        name: "Cabinet Secretariat (Rashtrapati Bhavan)",
+                  {
+                    "@type": "Organization",
+                    name: "Cabinet Secretariat (Rashtrapati Bhavan)",
                   },
-        ],
-        description:
-        "Senior Software Developer specializing in PHP, Laravel, MERN, and Python. Currently working at National Informatics Centre (NIC).",
-        address: {
-          "@type": "PostalAddress",
-        addressLocality: "New Delhi",
-        addressCountry: "India",
+                ],
+                description:
+                  "Senior Software Developer specializing in PHP, Laravel, MERN, and Python. Currently working at National Informatics Centre (NIC).",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "New Delhi",
+                  addressCountry: "India",
                 },
-        contactPoint: {
-          "@type": "ContactPoint",
-        contactType: "customer support",
-        email: siteMetadata.email,
-        url: `${siteMetadata.siteUrl}/#contact`,
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  contactType: "customer support",
+                  email: siteMetadata.email,
+                  url: `${siteMetadata.siteUrl}/#contact`,
                 },
               },
-        {
-          "@context": "https://schema.org",
-        "@type": "WebSite",
-        url: siteMetadata.siteUrl,
-        name: "Harsh Singh Portfolio",
-        description: "Portfolio of Harsh Singh, Senior Software Developer at NIC.",
-        author: {
-          "@type": "Person",
-        name: "Harsh Singh",
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                url: siteMetadata.siteUrl,
+                name: "Harsh Singh Portfolio",
+                description:
+                  "Portfolio of Harsh Singh, Senior Software Developer at NIC.",
+                author: {
+                  "@type": "Person",
+                  name: "Harsh Singh",
                 },
               },
-        ]),
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "Who is Harsh Singh?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Harsh Singh is a Senior Software Developer based in New Delhi, India. He works at the National Informatics Centre (NIC) and specializes in building enterprise-grade applications using PHP (Laravel), MERN Stack, and Python.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "What is Harsh Singh's expertise?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Harsh Singh (distinctharsh) is an expert in Full Stack Development, specifically Laravel, React.js, Next.js, and Python Django. He has extensive experience in developing gov-tech solutions.",
+                    },
+                  },
+                ],
+              },
+            ]),
           }}
         />
       </Head>
