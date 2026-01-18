@@ -52,6 +52,32 @@ export default function Home() {
             content={siteMetadata.googleSiteVerification}
           />
         )}
+        <link rel="apple-touch-icon" sizes="76x76" href="/hs_favicon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/hs_favicon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/hs_favicon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/hs_favicon.png" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content="#fff"
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content="#000"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
