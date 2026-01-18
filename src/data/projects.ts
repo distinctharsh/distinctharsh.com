@@ -5,8 +5,18 @@ import { siteMetadata } from "@/data/siteMetaData.mjs";
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
     index: 0,
+    title: "Cabinet Secretariat",
+    href: "https://master-cabsec.digifootprint.gov.in/",
+    tags: ["Next Js", "TypeScript", "Tailwind CSS", "Workflow"],
+    image: {
+      LIGHT: "/images/projectscabsec.png",
+      DARK: "/images/projects/cabsec.png",
+    },
+  },
+  {
+    index: 1,
     title: "Inspector Tracking System (ITS)",
-    href: "/#projects",
+    href: "#",
     tags: ["Laravel", "PHP", "RBAC", "Workflow"],
     image: {
       LIGHT: "/images/projects/portfolioLight.webp",
@@ -14,20 +24,30 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     },
   },
   {
-    index: 1,
-    title: "Ticketing Management System",
-    href: "/#projects",
-    tags: ["Laravel", "Public Facing", "Support", "Scalability"],
+    index: 2,
+    title: "Complaint Redressal Ticketing System",
+    href: "#",
+    tags: ["Laravel", "PHP", "RBAC", "Workflow"],
     image: {
       LIGHT: "/images/projects/portfolioLight.webp",
       DARK: "/images/projects/portfolioDark.webp",
     },
   },
   {
-    index: 2,
-    title: "Enterprise Web Applications",
-    href: "/#projects",
-    tags: ["CMS", "Secure", "Government", "Git"],
+    index: 3,
+    title: "QuickReturns - Shopify",
+    href: "https://quickreturns.ai/",
+    tags: ["Shopify", "Laravel", "PHP", "Public Facing", "Workflow"],
+    image: {
+      LIGHT: "/images/projects/portfolioLight.webp",
+      DARK: "/images/projects/portfolioDark.webp",
+    },
+  },
+  {
+    index: 4,
+    title: "Flurr - Ecommerce",
+    href: "https://flurr.in/",
+    tags: ["CMS", "Laravel", "PHP", "Public Facing", "Workflow"],
     image: {
       LIGHT: "/images/projects/portfolioLight.webp",
       DARK: "/images/projects/portfolioDark.webp",
@@ -61,7 +81,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     liveWebsiteHref: "#",
   },
   {
-    name: "Enterprise Web Applications",
+    name: "Flurr - Ecommerce",
     favicon: "/favicon.ico",
     imageUrl: [
       "/images/projects/portfolioLight.webp",
