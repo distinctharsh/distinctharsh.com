@@ -17,14 +17,14 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Harsh Singh | Software Developer"
-        description="Explore the professional portfolio of Harsh Singh, a skilled Software Developer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences."
+        title="Harsh Singh | Senior Software Developer | PHP, MERN, Python"
+        description="Harsh Singh (distinctharsh) is a Senior Software Developer specializing in PHP (Laravel), MERN Stack, and Python (Django). Expert in building scalable enterprise applications."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Harsh Singh - Software Developer",
+          title: "Harsh Singh - Senior Software Developer",
           description:
-            "Dive into the world of web development with Harsh Singh. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
+            "Portfolio of Harsh Singh (distinctharsh), a Senior Full Stack Developer. Expertise in Laravel, React, Next.js, and Python. Based in New Delhi.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
@@ -41,7 +41,7 @@ export default function Home() {
           {
             property: "keywords",
             content:
-              "React Developer, Software Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design",
+              "Harsh Singh, distinctharsh, distinct harsh, Senior Software Developer, PHP Developer, Laravel Developer, MERN Stack Developer, Python Developer, Django Developer, Full Stack Developer, Web Developer, Delhi, India, Software Engineer",
           },
         ]}
       />
@@ -52,6 +52,49 @@ export default function Home() {
             content={siteMetadata.googleSiteVerification}
           />
         )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Harsh Singh",
+                alternateName: "distinctharsh",
+                url: siteMetadata.siteUrl,
+                image: `${siteMetadata.siteUrl}${siteMetadata.image}`,
+                sameAs: [
+                  siteMetadata.github,
+                  siteMetadata.twitter,
+                  siteMetadata.linkedin,
+                  "https://blogs.distinctharsh.com",
+                ],
+                jobTitle: "Senior Software Developer",
+                worksFor: {
+                  "@type": "Organization",
+                  name: "NIC",
+                },
+                description:
+                  "Senior Software Developer specializing in PHP, Laravel, MERN, and Python.",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "New Delhi",
+                  addressCountry: "India",
+                },
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                url: siteMetadata.siteUrl,
+                name: "Harsh Singh Portfolio",
+                author: {
+                  "@type": "Person",
+                  name: "Harsh Singh",
+                },
+              },
+            ]),
+          }}
+        />
       </Head>
       <LandingHero />
       <SkillsShowcase skills={SKILLS_DATA} />

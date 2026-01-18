@@ -29,33 +29,31 @@ export default function ContactFormModal({
   const handleSubmit = async (values: ContactFormValues) => {
     setIsSendingMail(true);
     try {
-      const response = await fetch("/api/sendmail", {
+      const response = await fetch("/sendmail.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
-      if (response.ok) {
+      const data = await response.json();
+      if (data.success) {
         setToastState({
           type: "success",
           value: true,
-          message: "Successfully sent email",
+          message: "Thank you! Your message has been sent successfully.",
         });
         setShowModal(false);
       } else {
         setToastState({
-          type: response.status === 429 ? "warning" : "failure",
+          type: "failure",
           value: true,
-          message:
-            response.status === 429
-              ? "Rate Limiter: Only 5 email per hour"
-              : "Oop! Unable to send email",
+          message: data.message || "Unable to send email. Please try again.",
         });
       }
     } catch {
       setToastState({
         type: "failure",
         value: true,
-        message: "Oop! Unable to send email",
+        message: "Oop! Something went wrong. Please try again later.",
       });
     }
     setIsSendingMail(false);

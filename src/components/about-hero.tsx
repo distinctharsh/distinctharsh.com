@@ -19,7 +19,7 @@ export default function AboutHero() {
               width={100}
               height={100}
               className="h-auto w-full px-0 xl:px-16"
-              alt="hero image"
+              alt="Harsh Singh - Senior Software Developer"
               lightColor="#E0FFFF"
               darkColor="#004D4D"
               unoptimized
@@ -30,9 +30,9 @@ export default function AboutHero() {
       <div className="sm:1/2 mt-10 w-full lg:w-1/2">
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
-            <h1 className="text-6xl font-bold text-accent sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
+            <h2 className="text-6xl font-bold text-accent sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
               Hi, I&apos;m Harsh Singh
-            </h1>
+            </h2>
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">

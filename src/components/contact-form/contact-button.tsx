@@ -4,10 +4,11 @@ import { MailIcon } from "lucide-react";
 import FloatingMailButton, {
   floatingMailButtonoptions,
 } from "@/components/contact-form/floating-mail-button";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import ContactFormModal from "@/components/contact-form/contact-form-modal";
 
 export default function ContactButton() {
-  const refSendBtn = useRef<HTMLAnchorElement>(null);
+  const [showModal, setShowModal] = useState(false);
+  const refSendBtn = useRef<HTMLButtonElement>(null);
   const [isBtnVisible, setIsBtnVisible] = useState(false);
 
   const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -29,18 +30,19 @@ export default function ContactButton() {
 
   return (
     <>
-      {isBtnVisible && <FloatingMailButton />}
+      <ContactFormModal showModal={showModal} setShowModal={setShowModal} />
+      {isBtnVisible && <FloatingMailButton openModal={setShowModal} />}
 
-      <a
+      <button
         ref={refSendBtn}
-        href={`mailto:${siteMetadata.email}`}
+        onClick={() => setShowModal(true)}
         className="inline-flex items-center gap-2 rounded-md bg-background px-3 py-2 text-accent transition-transform duration-150 focus-within:scale-[1.05] hover:scale-[1.05] hover:bg-foreground hover:text-background"
       >
         <MailIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-9 lg:w-9" />
         <span className="text-base font-semibold sm:text-lg lg:text-xl">
           Send Message
         </span>
-      </a>
+      </button>
     </>
   );
 }

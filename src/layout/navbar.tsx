@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import MenuLogo from "@/components/utility/menu-button";
 import ThemeSwitch from "@/components/utility/theme-switch";
-import AnimatedLogo from "@/animation/animated-logo";
 import MobileMenu from "@/components/utility/mobile-menu";
 import { classNames } from "@/utility/classNames";
 
@@ -38,8 +37,10 @@ export default function Navbar(props: NavbarProps) {
           className="drop-shadow-teralight flex items-center justify-center"
           aria-label="Return to home page"
         >
-          <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-            <AnimatedLogo />
+          <div className="relative flex h-12 w-12 items-center justify-center sm:h-14 sm:w-14">
+            <span className="text-2xl font-bold text-accent sm:text-3xl">
+              HS
+            </span>
           </div>
         </Link>
         <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-accent/50 md:flex">

@@ -12,10 +12,10 @@ export const siteMetadata = {
   image: "/static/homepage.png",
   twitterImage: "/static/homepage.png",
   socialBanner: "/static/homepage.png",
-  email: "", // User did not provide email
-  github: "https://github.com", // Placeholder
-  twitter: "https://twitter.com", // Placeholder
-  linkedin: "https://www.linkedin.com", // Placeholder
+  email: "distinctharsh@gmail.com",
+  github: "https://github.com/distinctharsh",
+  twitter: "https://x.com/distinctharsh",
+  linkedin: "https://www.linkedin.com/in/devharshsingh/",
   locale: "en-US",
   googleSiteVerification: "",
 };
