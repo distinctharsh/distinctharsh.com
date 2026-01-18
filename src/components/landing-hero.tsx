@@ -47,10 +47,13 @@ export default function LandingHero() {
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-8 max-w-3xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-xl">
-                I am a Senior Software Developer with strong expertise in{" "}
-                <span className="font-semibold text-accent">PHP</span> and the{" "}
+                I am a Senior Software Developer with a diverse skillset
+                spanning{" "}
+                <span className="font-semibold text-accent">PHP (Laravel)</span>
+                , <span className="font-semibold text-accent">MERN Stack</span>,{" "}
+                <span className="font-semibold text-accent">Vue.js</span>, and{" "}
                 <span className="font-semibold text-accent">
-                  Laravel framework
+                  Python (Django)
                 </span>
                 . I specialize in building reliable, scalable, and
                 well-structured web applications for government and enterprise

@@ -36,10 +36,10 @@ export default function AboutHero() {
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              I am a Senior Software Developer focused on clean architecture,
-              role-based access control, and secure data handling. I believe in
-              deep fundamentals before frameworks and writing code that remains
-              maintainable for years to come.
+              I am a Senior Software Developer with mastery over multiple tech
+              stacks including PHP, React, Next.js, and Python. I believe in
+              adapting the right technology for the problem and writing code
+              that remains maintainable for years to come.
             </p>
           </FadeUp>
           <FadeUp key="description-2" duration={0.6} delay={0.4}>
@@ -48,8 +48,8 @@ export default function AboutHero() {
               <Link href="#projects" className="underline underline-offset-4">
                 <span className="text-accent">projects</span>
               </Link>{" "}
-              showcasing my expertise in PHP, Laravel, and enterprise
-              application development.
+              showcasing my expertise in Full Stack Development, MERN, Laravel,
+              and Enterprise Solutions.
             </p>
           </FadeUp>
           <FadeRight

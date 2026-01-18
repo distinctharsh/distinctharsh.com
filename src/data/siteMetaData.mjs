@@ -2,7 +2,7 @@ export const siteMetadata = {
   title: "Harsh Singh Portfolio",
   author: "Harsh Singh",
   headerTitle: "Harsh Singh",
-  description: "Senior Software Developer | PHP & Laravel Expert",
+  description: "Senior Full Stack Developer | PHP, MERN, Python & Next.js",
   language: "en-us",
   theme: "light",
   siteName: "harshsingh.dev",
