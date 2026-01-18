@@ -19,6 +19,9 @@ import SassSvg from "@/public/icons/sass.svg";
 import JavascriptSvg from "@/public/icons/javascript.svg";
 import TypescriptSvg from "@/public/icons/typescript.svg";
 import PythonSvg from "@/public/icons/python.svg";
+import PhpSvg from "@/public/icons/php.svg";
+import LaravelSvg from "@/public/icons/laravel.svg";
+import DjangoSvg from "@/public/icons/django.svg";
 
 // Libraries
 import ReactjsSvg from "@/public/icons/reactjs.svg";
@@ -69,6 +72,10 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         name: "Python",
         icon: PythonSvg,
       },
+      {
+        name: "PHP",
+        icon: PhpSvg,
+      },
     ],
   },
   {
@@ -77,6 +84,10 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       {
         name: "Reactjs",
         icon: ReactjsSvg,
+      },
+      {
+        name: "Laravel",
+        icon: LaravelSvg,
       },
       {
         name: "Nextjs",
@@ -134,6 +145,10 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       {
         name: "Flask",
         icon: SiFlask,
+      },
+      {
+        name: "Django",
+        icon: DjangoSvg,
       },
     ],
   },
