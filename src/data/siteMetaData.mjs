@@ -7,7 +7,7 @@ export const siteMetadata = {
   theme: "light",
   siteName: "harshsingh.dev",
   siteUrl: "https://harshsingh.dev",
-  siteRepo: "https://github.com/BUMBAIYA/amitchauhan-v2",
+  siteRepo: "https://github.com/distinctharsh/portfolio-v2",
   siteLogo: "/hs_favicon.png",
   image: "/static/homepage.png",
   twitterImage: "/static/homepage.png",
