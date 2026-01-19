@@ -202,8 +202,8 @@ export default function Home() {
             )}
             <div className="mx-auto mt-16 max-w-5xl text-center text-foreground md:mt-28">
               <span className="text-xl font-bold md:text-2xl">
-                I am currently building new projects and learning backend
-                development to expand my skill set beyond frontend.
+                I work across the full stack, with a strong focus on backend
+                architecture, system design, and performance-driven development.
               </span>
               <p className="mt-10 text-base md:text-xl">
                 Visit my github to see some of the latest projects{" "}

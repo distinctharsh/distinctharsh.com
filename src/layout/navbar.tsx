@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import MenuLogo from "@/components/utility/menu-button";
 import ThemeSwitch from "@/components/utility/theme-switch";
@@ -53,10 +53,7 @@ export default function Navbar(props: NavbarProps) {
           <ul className="flex gap-2 text-sm font-medium">
             {props.routes.map((_link, index) => {
               return (
-                <li
-                  key={index}
-                  className="my-3 transition-transform duration-100 hover:scale-[1.1]"
-                >
+                <li key={index} className="my-3">
                   <Link
                     href={_link.href}
                     className={classNames(
@@ -67,19 +64,7 @@ export default function Navbar(props: NavbarProps) {
                     )}
                   >
                     {isActiveLink(_link.href) && (
-                      <motion.span
-                        layoutId="tab-pill"
-                        animate={{
-                          transition: {
-                            x: {
-                              type: "spring",
-                              stiffness: 300,
-                              damping: 30,
-                            },
-                          },
-                        }}
-                        className="absolute inset-0 -z-10 rounded-full bg-accent group-hover:bg-accent/80"
-                      ></motion.span>
+                      <span className="absolute inset-0 -z-10 rounded-full bg-accent"></span>
                     )}
                     {_link.title}
                   </Link>

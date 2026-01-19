@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 import { AnimatePresence, motion } from "framer-motion";
 
 import FadeUp from "@/animation/fade-up";
+import ContactButton from "@/components/contact-form/contact-button";
 
 export default function LandingHero() {
   const [scrollY, setScrollY] = useState(0);
@@ -58,6 +60,17 @@ export default function LandingHero() {
                 . I specialize in building reliable, scalable, and
                 well-structured web applications for government and enterprise
                 use cases.
+              </div>
+            </FadeUp>
+            <FadeUp key="cta" duration={0.6} delay={0.3}>
+              <div className="pointer-events-auto mt-10 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/#projects"
+                  className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent/80 md:px-6 md:py-3 md:text-base"
+                >
+                  View Projects
+                </Link>
+                <ContactButton />
               </div>
             </FadeUp>
           </AnimatePresence>

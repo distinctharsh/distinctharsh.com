@@ -34,9 +34,14 @@ const swipePower = (offset: number, velocity: number) => {
 export type CoroselProps = {
   aspectRatio: number;
   images: string[];
+  alt?: string;
 };
 
-export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
+export default function Corosel({
+  aspectRatio = 1,
+  images,
+  alt,
+}: CoroselProps) {
   const [[page, direction], setPage] = useState([0, 0]);
 
   const imageIndex = wrap(0, images.length, page);
@@ -51,6 +56,10 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
     setPage([page + newDirection, newDirection]);
   };
 
+  const altText = alt
+    ? `${alt} (${imageIndex + 1}/${images.length})`
+    : "project screenshot";
+
   return (
     <div className="relative w-full overflow-hidden" style={{ aspectRatio }}>
       <AnimatePresence initial={false} custom={direction}>
@@ -60,6 +69,7 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
           className="h-full w-full bg-cover"
           style={{ aspectRatio }}
           src={images[imageIndex]}
+          alt={altText}
           custom={direction}
           variants={variant}
           initial="enter"
