@@ -4,6 +4,8 @@ import {
   SiPrisma,
   SiNextdotjs,
   SiFlask,
+  SiPhp,
+  SiDjango,
 } from "react-icons/si";
 import {
   FramerMotionIcon,
@@ -19,9 +21,7 @@ import SassSvg from "@/public/icons/sass.svg";
 import JavascriptSvg from "@/public/icons/javascript.svg";
 import TypescriptSvg from "@/public/icons/typescript.svg";
 import PythonSvg from "@/public/icons/python.svg";
-import PhpSvg from "@/public/icons/php.svg";
 import LaravelSvg from "@/public/icons/laravel.svg";
-import DjangoSvg from "@/public/icons/django.svg";
 
 // Libraries
 import ReactjsSvg from "@/public/icons/reactjs.svg";
@@ -74,7 +74,7 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       },
       {
         name: "PHP",
-        icon: PhpSvg,
+        icon: SiPhp,
       },
     ],
   },
@@ -148,7 +148,7 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       },
       {
         name: "Django",
-        icon: DjangoSvg,
+        icon: SiDjango,
       },
     ],
   },

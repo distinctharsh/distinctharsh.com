@@ -1,8 +1,8 @@
-import { FC, SVGProps } from "react";
+import { type ComponentType, type SVGProps } from "react";
 
 export type SkillPillProps = {
   name: string;
-  icon: FC<SVGProps<SVGSVGElement>>;
+  icon: ComponentType<{ className?: string } | SVGProps<SVGSVGElement>>;
 };
 
 export default function SkillPill(props: SkillPillProps) {

@@ -1,6 +1,5 @@
 import { Dispatch, Fragment, SetStateAction } from "react";
 import { useRouter } from "next/router";
-import { usePathname } from "next/navigation";
 
 import { Dialog, Transition } from "@headlessui/react";
 
@@ -18,8 +17,8 @@ export default function MobileMenu({
   routes,
   setOpenMenu,
 }: MobileMenuProps) {
-  const pathName = usePathname();
   const router = useRouter();
+  const currentPath = router.asPath;
 
   const handleClick = (href: string) => {
     setOpenMenu(false);
@@ -49,7 +48,7 @@ export default function MobileMenu({
                   >
                     <span
                       className={classNames(
-                        pathName === link.href ? "w-full" : "w-0",
+                        currentPath === link.href ? "w-full" : "w-0",
                         "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
                       )}
                     ></span>

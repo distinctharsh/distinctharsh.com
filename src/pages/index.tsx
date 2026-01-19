@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Head from "next/head";
 
 import { NextSeo } from "next-seo";
@@ -14,6 +16,12 @@ import ProjectCard from "@/components/projects/project-card";
 import { PROJECTS_CARD } from "@/data/projects";
 
 export default function Home() {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+
+  const visibleProjects = showAllProjects
+    ? PROJECTS_CARD
+    : PROJECTS_CARD.slice(0, 4);
+
   return (
     <>
       <NextSeo
@@ -177,10 +185,21 @@ export default function Home() {
               </span>
             </div>
             <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
-              {PROJECTS_CARD.map((card, index) => (
+              {visibleProjects.map((card, index) => (
                 <ProjectCard key={index} {...card} />
               ))}
             </div>
+            {PROJECTS_CARD.length > 4 && (
+              <div className="mt-10 flex justify-center">
+                <button
+                  type="button"
+                  onClick={() => setShowAllProjects((v) => !v)}
+                  className="rounded-md border border-accent/30 px-5 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent/10"
+                >
+                  {showAllProjects ? "See Less" : "See More"}
+                </button>
+              </div>
+            )}
             <div className="mx-auto mt-16 max-w-5xl text-center text-foreground md:mt-28">
               <span className="text-xl font-bold md:text-2xl">
                 I am currently building new projects and learning backend

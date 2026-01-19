@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -21,7 +21,8 @@ export interface NavbarProps {
 }
 
 export default function Navbar(props: NavbarProps) {
-  const pathName = usePathname();
+  const router = useRouter();
+  const currentPath = router.asPath;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,8 +30,13 @@ export default function Navbar(props: NavbarProps) {
     setIsModalOpen((prev) => !prev);
   };
 
+  const isActiveLink = (href: string) => {
+    if (href.startsWith("http")) return false;
+    return currentPath === href;
+  };
+
   return (
-    <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
+    <header className="sticky top-0 z-50 mt-2 bg-background/70 px-6 py-8 backdrop-blur-md sm:mt-8 sm:px-14 md:px-20">
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
         <Link
           href="/"
@@ -54,13 +60,13 @@ export default function Navbar(props: NavbarProps) {
                   <Link
                     href={_link.href}
                     className={classNames(
-                      pathName === _link.href
+                      isActiveLink(_link.href)
                         ? "font-semibold text-background dark:hover:text-foreground"
                         : "text-foreground",
                       "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
                     )}
                   >
-                    {_link.href === pathName && (
+                    {isActiveLink(_link.href) && (
                       <motion.span
                         layoutId="tab-pill"
                         animate={{
